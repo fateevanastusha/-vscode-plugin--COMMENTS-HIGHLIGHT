@@ -1,2 +1,13 @@
-/dist
-/node_modules
+# IDE & editors
+.idea
+.vscode-test
+
+# Dependency directory
+node_modules/
+
+# Compiled and tempory files
+dist/
+
+# Other files
+package-lock.json
+yarn.lock
