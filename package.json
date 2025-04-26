@@ -1,0 +1,25 @@
+{
+  "name": "todo-highligther",
+  "publisher": "nastya",
+  "displayName": "TODO highligther",
+  "description": "Highligth TODO comments in JS/TS files.",
+  "icon": "icon.png",
+  "homepage": "",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "typescript": "^5.8.3",
+    "vscode": "^1.1.37"
+  }
+}
