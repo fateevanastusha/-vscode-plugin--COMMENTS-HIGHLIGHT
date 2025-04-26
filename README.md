@@ -1,4 +1,5 @@
 # Comment Highlighter
+This is my first extension — a first attempt, a trial of my hand.
 
 ✨ **Comment Highlighter** is a VS Code extension that highlights comments in JavaScript and TypeScript files with a customizable color.
 
