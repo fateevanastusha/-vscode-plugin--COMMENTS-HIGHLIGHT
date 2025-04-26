@@ -1,10 +1,11 @@
 {
-  "name": "todo-highligther",
-  "publisher": "nastya",
-  "displayName": "TODO highligther",
-  "description": "Highligth TODO comments in JS/TS files.",
-  "icon": "icon.png",
-  "homepage": "",
+  "name": "commentHighlighter",
+  "displayName": "Comment Highlighter",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
   "categories": [
     "Other"
   ],
@@ -13,13 +14,34 @@
     "onLanguage:typescript"
   ],
   "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "commentHighlighter",
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "default": "#ff5794",
+          "description": "Highlight color.",
+          "format": "color" 
+        }
+      }
+    }
+  },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
-    "compile": "tsc"
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
   },
-  "devDependencies": {},
-  "dependencies": {
-    "typescript": "^5.8.3",
-    "vscode": "^1.1.37"
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2"
   }
 }
